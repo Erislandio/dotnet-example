@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/eris/.dotnet/store/|arch|/|tfm|",
+      "/home/eris/.nuget/packages"
+    ]
+  }
+}
