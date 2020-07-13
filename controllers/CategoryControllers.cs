@@ -21,6 +21,14 @@ namespace api.Controllers
             return categories;
         }
 
+        [HttpGet]
+        [Route("id:int")]
+        public async Task<ActionResult<Category>> Get([FromServices] DataContext context, int id)
+        {
+            var category = await context.Categories.Include(category => category.products).FirstOrDefaultAsync(category => category.Id == id);
+            return category;
+        }
+
         [HttpPost]
         [Route("")]
         public async Task<ActionResult<Category>> Post(
